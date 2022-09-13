@@ -1,6 +1,7 @@
 import React from 'react';
 import { AppShell } from "ui";
-import './App.css';
+import MoviesContent from './MoviesContent';
+
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <AppShell title="Movies" routes={[
         {
           path: "/",
-          element: () => <div>Home</div>,
+          element: MoviesContent,
         },
         {
           path: "/playlist",

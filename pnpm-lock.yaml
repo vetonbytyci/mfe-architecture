@@ -24,6 +24,7 @@ importers:
       '@types/node': ^16.11.58
       '@types/react': ^18.0.20
       '@types/react-dom': ^18.0.6
+      card: workspace:*
       react: ^18.2.0
       react-dom: ^18.2.0
       react-scripts: 5.0.1
@@ -42,6 +43,7 @@ importers:
       '@types/node': 16.11.58
       '@types/react': 18.0.20
       '@types/react-dom': 18.0.6
+      card: link:../../packages/card
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-scripts: 5.0.1_n4upredruleo7vrbwztywbpoxq
@@ -49,6 +51,33 @@ importers:
       typescript: 4.8.3
       ui: link:../../packages/ui
       web-vitals: 2.1.4
+
+  packages/card:
+    specifiers:
+      '@emotion/react': ^11.10.4
+      '@mantine/core': ^5.3.0
+      '@mantine/hooks': ^5.3.0
+      '@types/react': ^18.0.17
+      '@types/react-dom': ^18.0.6
+      eslint: ^7.32.0
+      eslint-config-custom: workspace:*
+      react: ^18.2.0
+      store: workspace:*
+      tsconfig: workspace:*
+      typescript: ^4.5.2
+    dependencies:
+      '@emotion/react': 11.10.4_w5j4k42lgipnm43s3brx6h3c34
+      '@mantine/core': 5.3.0_hlslh3d5377pwjbyu3ug2vpzs4
+      '@mantine/hooks': 5.3.0_react@18.2.0
+    devDependencies:
+      '@types/react': 18.0.20
+      '@types/react-dom': 18.0.6
+      eslint: 7.32.0
+      eslint-config-custom: link:../eslint-config-custom
+      react: 18.2.0
+      store: link:../store
+      tsconfig: link:../tsconfig
+      typescript: 4.8.3
 
   packages/eslint-config-custom:
     specifiers:
@@ -67,6 +96,29 @@ importers:
     devDependencies:
       typescript: 4.8.3
 
+  packages/store:
+    specifiers:
+      '@types/react': ^18.0.17
+      '@types/react-dom': ^18.0.6
+      eslint: ^7.32.0
+      eslint-config-custom: workspace:*
+      react: ^18.2.0
+      react-router-dom: ^6.4.0
+      tsconfig: workspace:*
+      typescript: ^4.5.2
+      zustand: ^4.1.1
+    dependencies:
+      react-router-dom: 6.4.0_react@18.2.0
+      zustand: 4.1.1_react@18.2.0
+    devDependencies:
+      '@types/react': 18.0.20
+      '@types/react-dom': 18.0.6
+      eslint: 7.32.0
+      eslint-config-custom: link:../eslint-config-custom
+      react: 18.2.0
+      tsconfig: link:../tsconfig
+      typescript: 4.8.3
+
   packages/tsconfig:
     specifiers: {}
 
@@ -81,6 +133,7 @@ importers:
       eslint-config-custom: workspace:*
       react: ^18.2.0
       react-router-dom: ^6.4.0
+      store: workspace:*
       tsconfig: workspace:*
       typescript: ^4.5.2
     dependencies:
@@ -94,6 +147,7 @@ importers:
       eslint: 7.32.0
       eslint-config-custom: link:../eslint-config-custom
       react: 18.2.0
+      store: link:../store
       tsconfig: link:../tsconfig
       typescript: 4.8.3
 
@@ -10299,6 +10353,14 @@ packages:
       use-isomorphic-layout-effect: 1.1.2_w5j4k42lgipnm43s3brx6h3c34
     dev: false
 
+  /use-sync-external-store/1.2.0_react@18.2.0:
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: false
@@ -10857,4 +10919,20 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: false
+
+  /zustand/4.1.1_react@18.2.0:
+    resolution: {integrity: sha512-h4F3WMqsZgvvaE0n3lThx4MM81Ls9xebjvrABNzf5+jb3/03YjNTSgZXeyrvXDArMeV9untvWXRw1tY+ntPYbA==}
+    engines: {node: '>=12.7.0'}
+    peerDependencies:
+      immer: '>=9.0'
+      react: '>=16.8'
+    peerDependenciesMeta:
+      immer:
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      react: 18.2.0
+      use-sync-external-store: 1.2.0_react@18.2.0
     dev: false

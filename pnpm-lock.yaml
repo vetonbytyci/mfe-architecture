@@ -25,6 +25,8 @@ importers:
       '@types/react': ^18.0.20
       '@types/react-dom': ^18.0.6
       card: workspace:*
+      movies-content: workspace:*
+      playlist-content: workspace:*
       react: ^18.2.0
       react-dom: ^18.2.0
       react-scripts: 5.0.1
@@ -44,9 +46,57 @@ importers:
       '@types/react': 18.0.20
       '@types/react-dom': 18.0.6
       card: link:../../packages/card
+      movies-content: link:../../packages/movies-content
+      playlist-content: link:../../packages/playlist-content
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-scripts: 5.0.1_n4upredruleo7vrbwztywbpoxq
+      tsconfig: link:../../packages/tsconfig
+      typescript: 4.8.3
+      ui: link:../../packages/ui
+      web-vitals: 2.1.4
+
+  apps/playlist:
+    specifiers:
+      '@emotion/react': ^11.10.4
+      '@mantine/core': ^5.3.0
+      '@mantine/hooks': ^5.3.0
+      '@testing-library/jest-dom': ^5.16.5
+      '@testing-library/react': ^13.4.0
+      '@testing-library/user-event': ^13.5.0
+      '@types/jest': ^27.5.2
+      '@types/node': ^16.11.58
+      '@types/react': ^18.0.20
+      '@types/react-dom': ^18.0.6
+      card: workspace:*
+      movies-content: workspace:*
+      playlist-content: workspace:*
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      react-scripts: 5.0.1
+      store: workspace:*
+      tsconfig: workspace:*
+      typescript: ^4.8.3
+      ui: workspace:*
+      web-vitals: ^2.1.4
+    dependencies:
+      '@emotion/react': 11.10.4_w5j4k42lgipnm43s3brx6h3c34
+      '@mantine/core': 5.3.0_vamtjc463qxfsih7thqcmyj3qy
+      '@mantine/hooks': 5.3.0_react@18.2.0
+      '@testing-library/jest-dom': 5.16.5
+      '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
+      '@testing-library/user-event': 13.5.0
+      '@types/jest': 27.5.2
+      '@types/node': 16.11.58
+      '@types/react': 18.0.20
+      '@types/react-dom': 18.0.6
+      card: link:../../packages/card
+      movies-content: link:../../packages/movies-content
+      playlist-content: link:../../packages/playlist-content
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-scripts: 5.0.1_n4upredruleo7vrbwztywbpoxq
+      store: link:../../packages/store
       tsconfig: link:../../packages/tsconfig
       typescript: 4.8.3
       ui: link:../../packages/ui
@@ -94,6 +144,68 @@ importers:
       eslint-config-turbo: 0.0.3_eslint@7.32.0
       eslint-plugin-react: 7.31.7_eslint@7.32.0
     devDependencies:
+      typescript: 4.8.3
+
+  packages/movies-content:
+    specifiers:
+      '@emotion/react': ^11.10.4
+      '@mantine/core': ^5.3.0
+      '@mantine/hooks': ^5.3.0
+      '@types/react': ^18.0.17
+      '@types/react-dom': ^18.0.6
+      card: workspace:*
+      eslint: ^7.32.0
+      eslint-config-custom: workspace:*
+      react: ^18.2.0
+      react-router-dom: ^6.4.0
+      store: workspace:*
+      tsconfig: workspace:*
+      typescript: ^4.5.2
+    dependencies:
+      '@emotion/react': 11.10.4_w5j4k42lgipnm43s3brx6h3c34
+      '@mantine/core': 5.3.0_hlslh3d5377pwjbyu3ug2vpzs4
+      '@mantine/hooks': 5.3.0_react@18.2.0
+      react-router-dom: 6.4.0_react@18.2.0
+    devDependencies:
+      '@types/react': 18.0.20
+      '@types/react-dom': 18.0.6
+      card: link:../card
+      eslint: 7.32.0
+      eslint-config-custom: link:../eslint-config-custom
+      react: 18.2.0
+      store: link:../store
+      tsconfig: link:../tsconfig
+      typescript: 4.8.3
+
+  packages/playlist-content:
+    specifiers:
+      '@emotion/react': ^11.10.4
+      '@mantine/core': ^5.3.0
+      '@mantine/hooks': ^5.3.0
+      '@types/react': ^18.0.17
+      '@types/react-dom': ^18.0.6
+      card: workspace:*
+      eslint: ^7.32.0
+      eslint-config-custom: workspace:*
+      react: ^18.2.0
+      react-router-dom: ^6.4.0
+      store: workspace:*
+      tsconfig: workspace:*
+      typescript: ^4.5.2
+    dependencies:
+      '@emotion/react': 11.10.4_w5j4k42lgipnm43s3brx6h3c34
+      '@mantine/core': 5.3.0_hlslh3d5377pwjbyu3ug2vpzs4
+      '@mantine/hooks': 5.3.0_react@18.2.0
+      react-router-dom: 6.4.0_react@18.2.0
+    devDependencies:
+      '@types/react': 18.0.20
+      '@types/react-dom': 18.0.6
+      card: link:../card
+      eslint: 7.32.0
+      eslint-config-custom: link:../eslint-config-custom
+      react: 18.2.0
+      store: link:../store
+      tsconfig: link:../tsconfig
       typescript: 4.8.3
 
   packages/store:
@@ -2863,7 +2975,7 @@ packages:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
       '@types/eslint': 8.4.6
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
     dev: false
 
   /@types/eslint/8.4.6:

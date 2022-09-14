@@ -4,7 +4,7 @@ import { Box, Title, Grid } from "@mantine/core";
 import { useStore } from "store";
 import { MovieCard } from "card";
 
-export const Playlist = () => {
+const Playlist = () => {
   const { movies } = useStore();
 
   return (
@@ -26,3 +26,4 @@ export const Playlist = () => {
   )
 }
 
+export default Playlist;

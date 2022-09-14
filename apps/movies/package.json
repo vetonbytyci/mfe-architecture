@@ -13,21 +13,21 @@
     "@types/node": "^16.11.58",
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
+    "card": "workspace:*",
+    "movies-content": "workspace:*",
+    "playlist-content": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "tsconfig": "workspace:*",
     "typescript": "^4.8.3",
     "ui": "workspace:*",
-    "card": "workspace:*",
-    "movies-content": "workspace:*",
-    "playlist-content": "workspace:*",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "dev": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -47,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^6.4.5"
   }
 }

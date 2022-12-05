@@ -2,8 +2,11 @@
   "extends": "tsconfig/base.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "noEmit": true
   },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
   "exclude": [
     "node_modules",
     "dist",

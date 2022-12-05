@@ -4,7 +4,6 @@
   "extends": "./base.json",
   "compilerOptions": {
     "jsx": "preserve",
-    "noEmit": true,
     "target": "es5"
   }
 }

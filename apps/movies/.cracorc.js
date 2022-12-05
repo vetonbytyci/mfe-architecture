@@ -17,9 +17,6 @@ module.exports = () => ({
         new ModuleFederationPlugin({
           name: "movies",
           filename: "remoteEntry.js",
-          exposes: {
-            "./Movies": "./src/MoviesContent",
-          },
           shared: {
             ...deps,
             card: {

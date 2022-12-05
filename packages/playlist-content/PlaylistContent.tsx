@@ -9,7 +9,7 @@ function Playlist() {
   return (
     <>
       <Box>
-        <Title>Viewing List</Title>
+        <Title sx={{ marginBottom: "3rem" }}>Viewing List</Title>
       </Box>
       <Grid
         mt={20}

@@ -47,7 +47,7 @@ const movies = [
 function MoviesContent() {
   return (
     <>
-      <Title>Movies</Title>
+      <Title sx={{ marginBottom: "3rem" }}>Movies</Title>
       <Grid
         sx={{
           gap: "1rem",

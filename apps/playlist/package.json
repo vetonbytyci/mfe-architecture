@@ -13,6 +13,7 @@
     "@types/node": "^16.11.58",
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
+    "error-boundary": "workspace:*",
     "card": "workspace:*",
     "movies-content": "workspace:*",
     "playlist-content": "workspace:*",

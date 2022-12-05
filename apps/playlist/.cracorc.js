@@ -31,6 +31,9 @@ module.exports = () => ({
             "playlist-content": {
               singleton: true,
             },
+            "error-boundary": {
+              singleton: true,
+            },
             tsconfig: {
               singleton: true,
             },

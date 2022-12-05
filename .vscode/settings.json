@@ -2,5 +2,15 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "eslint.workingDirectories": [
+    {
+      "directory": "workspaces/apps",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "workspaces/packages",
+      "changeProcessCWD": true
+    },
+  ]
 }

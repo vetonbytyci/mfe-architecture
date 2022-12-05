@@ -3,38 +3,18 @@ import { AppShell } from "ui";
 
 import { Playlist } from "playlist-content";
 import { MoviesContent } from "movies-content";
+import ErrorBoundary from "error-boundary";
 
 // @ts-ignore
+// eslint-disable-next-line import/no-unresolved
 const MoviesContentRuntime = React.lazy(() => import("movies/Movies"));
 
-class ErrorBoundary extends React.Component<
-  {
-    children: React.ReactNode;
-  },
-  {
-    hasError: boolean;
-  }
-> {
-  constructor(props: { children: React.ReactNode }) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError() {
-    // Update state so the next render will show the fallback UI.
-    return { hasError: true };
-  }
-
-  componentDidCatch() {}
-
-  render() {
-    if (this.state.hasError) {
-      // You can render any custom fallback UI
-      return <MoviesContent />;
-    }
-
-    return this.props.children;
-  }
+function MoviesContentRoute() {
+  return (
+    <ErrorBoundary fallBackComponent={<MoviesContent />}>
+      <MoviesContentRuntime />
+    </ErrorBoundary>
+  );
 }
 
 function App() {
@@ -46,11 +26,7 @@ function App() {
         routes={[
           {
             path: "/",
-            element: () => (
-              <ErrorBoundary>
-                <MoviesContentRuntime />
-              </ErrorBoundary>
-            ),
+            element: MoviesContentRoute,
           },
           {
             path: "/playlist",

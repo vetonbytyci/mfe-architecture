@@ -23,19 +23,15 @@
     "tsconfig": "workspace:*",
     "typescript": "^4.8.3",
     "ui": "workspace:*",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "eslint-config-custom": "workspace:*"
   },
   "scripts": {
     "dev": "PORT=3001 craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "lint": "eslint src --fix"
   },
   "browserslist": {
     "production": [

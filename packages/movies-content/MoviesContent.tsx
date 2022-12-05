@@ -1,4 +1,3 @@
-import React from "react";
 import { Grid, Title } from "@mantine/core";
 import { MovieCard } from "card";
 

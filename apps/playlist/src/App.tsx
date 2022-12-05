@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { AppShell } from "ui";
 
 import { Playlist } from "playlist-content";
@@ -7,14 +7,15 @@ import { MoviesContent } from "movies-content";
 // @ts-ignore
 const MoviesContentRuntime = React.lazy(() => import("movies/Movies"));
 
-class ErrorBoundary extends React.Component<{
-  children: React.ReactNode;
-}, {
-  hasError: boolean;
-}> {
-  constructor(props: {
+class ErrorBoundary extends React.Component<
+  {
     children: React.ReactNode;
-  }) {
+  },
+  {
+    hasError: boolean;
+  }
+> {
+  constructor(props: { children: React.ReactNode }) {
     super(props);
     this.state = { hasError: false };
   }
@@ -24,8 +25,7 @@ class ErrorBoundary extends React.Component<{
     return { hasError: true };
   }
 
-  componentDidCatch() {
-  }
+  componentDidCatch() {}
 
   render() {
     if (this.state.hasError) {
@@ -33,24 +33,29 @@ class ErrorBoundary extends React.Component<{
       return <MoviesContent />;
     }
 
-    return this.props.children; 
+    return this.props.children;
   }
 }
 
 function App() {
   return (
     <div className="App">
-      <AppShell title="Playlist"
+      <AppShell
+        title="Playlist"
         colorScheme="dark"
         routes={[
           {
             path: "/",
-            element: () => <ErrorBoundary><MoviesContentRuntime /></ErrorBoundary>,
+            element: () => (
+              <ErrorBoundary>
+                <MoviesContentRuntime />
+              </ErrorBoundary>
+            ),
           },
           {
             path: "/playlist",
             element: Playlist,
-          }
+          },
         ]}
         navLinks={[
           {
@@ -60,7 +65,7 @@ function App() {
           {
             label: "Playlist",
             path: "/playlist",
-          }
+          },
         ]}
       />
     </div>

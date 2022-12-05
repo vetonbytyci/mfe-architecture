@@ -16,12 +16,12 @@
     "eslint-config-custom": "workspace:*",
     "react": "^18.2.0",
     "tsconfig": "workspace:*",
-    "store": "workspace:*",
     "typescript": "^4.5.2"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@mantine/core": "^5.3.0",
-    "@mantine/hooks": "^5.3.0"
+    "@mantine/hooks": "^5.3.0",
+    "store": "workspace:*"
   }
 }

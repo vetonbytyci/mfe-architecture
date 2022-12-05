@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Title, Grid } from "@mantine/core";
 
 import { useStore } from "store";
@@ -19,11 +18,11 @@ const Playlist = () => {
         }}
       >
         {movies.map((movie) => (
-          <MovieCard  {...movie} key={movie.title} />
+          <MovieCard {...movie} key={movie.title} />
         ))}
       </Grid>
     </>
-  )
-}
+  );
+};
 
 export default Playlist;

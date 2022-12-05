@@ -3,7 +3,7 @@ import { Box, Title, Grid } from "@mantine/core";
 import { useStore } from "store";
 import { MovieCard } from "card";
 
-const Playlist = () => {
+function Playlist() {
   const { movies } = useStore();
 
   return (
@@ -18,11 +18,15 @@ const Playlist = () => {
         }}
       >
         {movies.map((movie) => (
-          <MovieCard {...movie} key={movie.title} />
+          <MovieCard
+            title={movie.title}
+            image={movie.image}
+            key={movie.title}
+          />
         ))}
       </Grid>
     </>
   );
-};
+}
 
 export default Playlist;

@@ -33,6 +33,8 @@ module.exports = {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "react/require-default-props": "off",
+    "import/prefer-default-export": "off",
+    "@next/next/no-html-link-for-pages": ["error", "client/pages"],
   },
   overrides: [
     {

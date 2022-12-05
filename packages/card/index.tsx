@@ -9,11 +9,15 @@ import {
 } from "@mantine/core";
 import { useStore } from "store";
 
-export const MovieCard: React.FunctionComponent<{
+export function MovieCard({
+  title,
+  image,
+  showAddButton = true,
+}: {
   title: string;
   image: string;
   showAddButton?: boolean;
-}> = ({ title, image, showAddButton = true }) => {
+}) {
   const theme = useMantineTheme();
   const { addMovie } = useStore();
 
@@ -41,4 +45,4 @@ export const MovieCard: React.FunctionComponent<{
       )}
     </Card>
   );
-};
+}

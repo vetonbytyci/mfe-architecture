@@ -12,7 +12,7 @@ import {
 } from "@mantine/core";
 import { useStore } from "store";
 
-export type Route = {
+export type RouteType = {
   element: React.FunctionComponent;
   path: string;
 };
@@ -49,12 +49,17 @@ function MainLink({ label, path }: NavLink) {
   );
 }
 
-export const AppShell: React.FunctionComponent<{
+export function AppShell({
+  title,
+  routes,
+  navLinks,
+  colorScheme,
+}: {
   title: string;
-  routes: Route[];
+  routes: RouteType[];
   navLinks: NavLink[];
   colorScheme?: "dark" | "light";
-}> = ({ title, colorScheme, routes, navLinks }) => {
+}) {
   const { movies } = useStore();
 
   return (
@@ -69,7 +74,7 @@ export const AppShell: React.FunctionComponent<{
           navbar={
             <Navbar width={{ base: 300 }} height={500} p="xs">
               {navLinks.map((link) => (
-                <MainLink {...link} key={link.path} />
+                <MainLink label={link.label} path={link.path} key={link.path} />
               ))}
             </Navbar>
           }
@@ -106,4 +111,4 @@ export const AppShell: React.FunctionComponent<{
       </MantineProvider>
     </BrowserRouter>
   );
-};
+}

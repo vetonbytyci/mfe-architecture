@@ -44,19 +44,25 @@ const movies = [
   },
 ];
 
-const MoviesContent = () => (
-  <>
-    <Title>Movies</Title>
-    <Grid
-      sx={{
-        gap: "1rem",
-      }}
-    >
-      {movies.map((movie) => (
-        <MovieCard {...movie} key={movie.title} />
-      ))}
-    </Grid>
-  </>
-);
+function MoviesContent() {
+  return (
+    <>
+      <Title>Movies</Title>
+      <Grid
+        sx={{
+          gap: "1rem",
+        }}
+      >
+        {movies.map((movie) => (
+          <MovieCard
+            title={movie.title}
+            image={movie.image}
+            key={movie.title}
+          />
+        ))}
+      </Grid>
+    </>
+  );
+}
 
 export default MoviesContent;

@@ -5,8 +5,6 @@ import { Playlist } from "playlist-content";
 import { MoviesContent } from "movies-content";
 import ErrorBoundary from "error-boundary";
 
-// @ts-ignore
-// eslint-disable-next-line import/no-unresolved
 const MoviesContentRuntime = React.lazy(() => import("movies/Movies"));
 
 function MoviesContentRoute() {
